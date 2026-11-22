@@ -61,6 +61,8 @@ Each **row** is one complaint (one paper slip). Each **column** is one piece of 
 | 2 | Ravi | Plumbing | Tap leaking in washroom | 2026-11-22 | Pending |
 | 3 | Meena | Furniture | Broken bench in Class 3B | 2026-11-23 | Resolved |
 
+![The complaints table with sample rows](images/D5_complaints_table.png)
+
 ### Why these columns? Matching the brief
 
 The brief asked us to store 5 things: **ID, Category, Description, Submission date, Status.** All five are here.
@@ -107,6 +109,8 @@ There are only **three allowed statuses**:
    Pending  ──►  In Progress  ──►  Resolved
    (waiting)     (being fixed)     (fixed!)
 ```
+
+![Status flow: Pending, In Progress, Resolved](images/D2_status_flow.png)
 
 - A new complaint is **always Pending**. The student cannot choose anything else.
 - Only the **Administrator** changes the status.
@@ -195,6 +199,8 @@ You will see all rows printed as a list.
 ---
 
 ## 11. Putting it all together: one complaint's journey
+
+![One complaint's journey](images/D3_complaint_journey.png)
 
 1. **Asha** opens the page, writes "Fan not working in Room 101", clicks Submit.
 2. `app.py` checks the boxes are not empty, then calls `add_complaint(...)` in `database.py`.

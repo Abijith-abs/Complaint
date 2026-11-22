@@ -25,6 +25,8 @@ College_Complaint_System/
 └── .gitignore              <- list of files Git should not save
 ```
 
+![Project folder map](images/D4_folder_map.png)
+
 > **Real-world example: a restaurant.**
 > - `app.py` = the **waiter**. Talks to customers, takes orders, shows the menu.
 > - `database.py` = the **kitchen/storeroom**. Keeps the ingredients (data) and prepares what is asked.
@@ -36,6 +38,8 @@ The waiter never goes into the fridge himself. He always asks the kitchen. In ou
 ---
 
 ## 2. How the pieces talk to each other
+
+![How app.py, database.py and complaints.db talk](images/D1_how_pieces_talk.png)
 
 ```
  Person in browser
@@ -203,6 +207,10 @@ role = st.sidebar.radio("I am a...", ["Student / Staff", "Administrator"])
   - When Submit is clicked, the code checks: name empty? show a red error. Description empty? red error. Otherwise call `db.add_complaint(...)` and show a green success message with the new ID.
 - **Tab 2, "My Complaints"**: if no name yet, show a blue hint. Otherwise call `db.get_complaints_by_user(name)` and show the rows as a table.
 
+![What student_screen draws: Register Complaint tab](images/02_register_form.png)
+
+![What student_screen draws: My Complaints tab](images/04_my_complaints.png)
+
 ### 5.4 `admin_screen()`: what the administrator sees
 
 1. Asks for the password in the sidebar. If it is wrong, shows a hint and **stops** (`return`), so nothing else is shown.
@@ -210,6 +218,8 @@ role = st.sidebar.radio("I am a...", ["Student / Staff", "Administrator"])
 3. **"All complaints"**: a status filter and a table from `db.get_all_complaints(...)`.
 
 The update form is placed *above* the table so that after you update, the table below already shows the new status.
+
+![What admin_screen draws](images/06_admin_dashboard.png)
 
 ### 5.5 The last lines: pick the screen
 
@@ -266,6 +276,8 @@ The first lines of the file tell Python where to find `src/database.py` (`sys.pa
 ---
 
 ## 8. Following one click through the code
+
+![A complaint's journey](images/D3_complaint_journey.png)
 
 **Asha clicks "Submit Complaint":**
 1. Streamlit re-reads `app.py` from top to bottom.

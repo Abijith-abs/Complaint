@@ -67,6 +67,8 @@ College_Complaint_System/
 
 **Think of it like a school bag:** `src` is your textbooks (the real stuff), `tests` is your exam paper, `data` is your notebook, `docs` is your teacher's notes.
 
+![Project folder map](images/D4_folder_map.png)
+
 If the project is on GitHub, download it with `git clone <the-project-link>`, or simply copy the folder to your computer.
 
 ---
@@ -110,18 +112,32 @@ Click the terminal and press **Ctrl + C**. The page stops working until you star
 
 ### As a Student/Staff
 1. In the left sidebar, make sure **Student / Staff** is selected.
+
+![The home screen for Student / Staff](images/01_home_student.png)
+
+*This is the first screen you see. The left sidebar picks your role and holds your name box.*
 2. In **"Your name or ID"** type `Asha`.
 3. In the **Register Complaint** tab, choose a category (e.g. Electrical) and type: `Fan not working in Room 101`.
+
+![Register Complaint form](images/02_register_form.png)
 4. Click **Submit Complaint**. A green message shows your **Complaint ID** and that the status is **Pending**.
+
+![Green success message with the Complaint ID](images/03_submit_success.png)
 5. Click the **My Complaints** tab. Your complaint is listed.
+
+![My Complaints table](images/04_my_complaints.png)
 
 > Use the **same name** next time. The name is how the system remembers which complaints are yours (like writing your name on your lunch box).
 
 ### As the Administrator
 1. In the sidebar choose **Administrator**.
+
+![Administrator login in the sidebar](images/05_admin_login.png)
 2. Type the password: `admin123`.
 3. Under **Update a complaint's status**, pick the Complaint ID, choose **In Progress**, click **Update Status**.
 4. Scroll down to **All complaints**. You can filter by status.
+
+![Administrator screen with status update form and all complaints table](images/06_admin_dashboard.png)
 
 ### Back as the Student
 Switch to **Student / Staff**, type `Asha`, open **My Complaints**. The status now says **In Progress**.
