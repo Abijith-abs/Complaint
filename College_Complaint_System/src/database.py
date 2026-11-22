@@ -1,14 +1,18 @@
 """database.py - all SQLite code lives here (Module 5: Database Management)."""
+import os
 import sqlite3
 from datetime import date
 
-DB_FILE = "complaints.db"
+# The database file lives in the "data" folder, next to "src".
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_FILE = os.path.join(PROJECT_DIR, "data", "complaints.db")
 STATUSES = ["Pending", "In Progress", "Resolved"]
 CATEGORIES = ["Electrical", "Plumbing", "Furniture", "Computer Lab", "Fans / Lights", "Other"]
 
 
 def get_connection(db_file=DB_FILE):
     """Open a connection to the database file (it is created if missing)."""
+    os.makedirs(os.path.dirname(os.path.abspath(db_file)), exist_ok=True)
     return sqlite3.connect(db_file)
 
 

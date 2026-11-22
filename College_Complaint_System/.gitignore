@@ -1,2 +1,2 @@
-complaints.db
+data/*.db
 __pycache__/

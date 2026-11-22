@@ -1,7 +1,10 @@
-"""Simple tests for database.py. Run with:  python test_database.py
+"""Simple tests for database.py. Run from the project folder with:  python tests/test_database.py
 Uses a temporary database so real data is never touched."""
 import os
+import sys
 import tempfile
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src"))
 
 import database as db
 

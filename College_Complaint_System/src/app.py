@@ -1,4 +1,4 @@
-"""app.py - the Streamlit screens. Run with:  streamlit run app.py"""
+"""app.py - the Streamlit screens. Run from the project folder with:  streamlit run src/app.py"""
 import pandas as pd
 import streamlit as st
 

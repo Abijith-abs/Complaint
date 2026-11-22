@@ -1,24 +1,25 @@
 # College Complaint & Maintenance Management System
 
-Beginner-friendly prototype using Python, Streamlit and SQLite.
+A small Python + Streamlit + SQLite app for registering and tracking college maintenance complaints.
 
-## Files
-| File | What it does |
-| --- | --- |
-| `database.py` | All SQLite code: create table, add, view, update complaints |
-| `app.py` | Streamlit screens (Student/Staff and Administrator) |
-| `test_database.py` | 11 simple tests; run and keep the output as testing evidence |
-| `complaints.db` | Created automatically on first run |
-
-## Run
 ```
-cd College_Complaint_System
-streamlit run app.py
-python test_database.py
+College_Complaint_System/
+├── src/      <- the program (app.py = screens, database.py = storage)
+├── tests/    <- test script (testing evidence)
+├── data/     <- the database file (complaints.db) appears here
+└── docs/     <- guides (.md and .docx versions)
 ```
 
-## Using it
-- **Student/Staff:** type your name/ID in the sidebar, submit a complaint (starts as Pending), and check "My Complaints" for status.
-- **Administrator:** choose Administrator, password `admin123` (prototype only), view/filter all complaints, update status.
+## Quick start
+```
+pip install -r requirements.txt
+streamlit run src/app.py
+python tests/test_database.py
+```
 
-Note: a "Submitted By" column was added to the 5 required fields so each user can see only their own complaints. Use sample data only.
+## Guides (start here)
+1. `docs/01_Setup_and_Run_Guide` - install, run, troubleshoot
+2. `docs/02_Database_Guide` - how data is stored
+3. `docs/03_Code_Explanation_Guide` - what each file does
+
+Each guide is available as `.md` and `.docx`.
